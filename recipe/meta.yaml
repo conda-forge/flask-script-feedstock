@@ -1,21 +1,22 @@
-{%set name = "Flask-Script" %}
-{%set version = "2.0.5" %}
-{%set compress_type = "tar.gz" %}
-{%set hash_type = "sha256" %}
-{%set hash_val = "cef76eac751396355429a14c38967bb14d4973c53e07dec94af5cc8fb017107f" %}
-{%set build_num = "1" %}
+{% set name = "Flask-Script" %}
+{% set version = "2.0.6" %}
+{% set bundle = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash = "6425963d91054cfcc185807141c7314a9c5ad46325911bd24dcb489bd0161c65" %}
+{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ compress_type }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
-  {{ hash_type }}: {{ hash_val }}
+  fn: {{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
+  {{ hash_type }}: {{ hash }}
 
 build:
-  number: {{ build_num }}
+  noarch: python
+  number: {{ build }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:

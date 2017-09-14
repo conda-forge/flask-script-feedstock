@@ -1,9 +1,9 @@
 {%set name = "Flask-Script" %}
-{%set version = "2.0.5" %}
+{%set version = "2.0.6" %}
 {%set compress_type = "tar.gz" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "cef76eac751396355429a14c38967bb14d4973c53e07dec94af5cc8fb017107f" %}
-{%set build_num = "1" %}
+{%set hash_val = "6425963d91054cfcc185807141c7314a9c5ad46325911bd24dcb489bd0161c65" %}
+{% set build_num = 0 %}
 
 package:
   name: {{ name|lower }}
